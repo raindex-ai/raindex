@@ -1,15 +1,37 @@
 import type { Metadata } from "next";
 import { Sora } from "next/font/google";
 import "./globals.css";
+import { ThemeProvider } from "@/lib/theme-context";
 
-const sora = Sora({
-  variable: "--font-sora",
-  subsets: ["latin"],
-});
+const sora = Sora({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Raindex",
-  description: "Coming Soon",
+  title: "Raindex – Deterministic AI for Parcel Contracts",
+  description: "Raindex is a SaaS platform that lets shippers simulate, compare, and execute multi-carrier parcel strategy.",
+  icons: {
+    icon: "/images/favicon.ico",
+  },
+  openGraph: {
+    title: "Raindex",
+    description: "Simulate, compare, and execute parcel contract logic with deterministic AI.",
+    url: "https://raindex.ai",
+    siteName: "Raindex",
+    images: [
+      {
+        url: "/images/socialpreview.png",
+        width: 1200,
+        height: 630,
+        alt: "Raindex Hero Image",
+      },
+    ],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Raindex",
+    description: "Simulate, compare, and execute parcel contract logic with deterministic AI.",
+    images: ["/images/socialpreview.png"],
+  },
 };
 
 export default function RootLayout({
@@ -19,10 +41,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${sora.variable} antialiased`}
-      >
-        {children}
+      <body className={sora.className}>
+        <ThemeProvider>
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   );

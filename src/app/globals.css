@@ -121,51 +121,43 @@
   }
 }
 
-@keyframes rainbow-glow {
+@keyframes gradient-shift {
   0% {
-    color: #ff6b6b;
-    text-shadow: 
-      0 0 10px #ff6b6b,
-      0 0 20px #ff6b6b;
-  }
-  16.66% {
-    color: #4ecdc4;
-    text-shadow: 
-      0 0 10px #4ecdc4,
-      0 0 20px #4ecdc4;
-  }
-  33.33% {
-    color: #45b7d1;
-    text-shadow: 
-      0 0 10px #45b7d1,
-      0 0 20px #45b7d1;
+    background-position: 0% 50%;
   }
   50% {
-    color: #96ceb4;
-    text-shadow: 
-      0 0 10px #96ceb4,
-      0 0 20px #96ceb4;
-  }
-  66.66% {
-    color: #feca57;
-    text-shadow: 
-      0 0 10px #feca57,
-      0 0 20px #feca57;
-  }
-  83.33% {
-    color: #ff9ff3;
-    text-shadow: 
-      0 0 10px #ff9ff3,
-      0 0 20px #ff9ff3;
+    background-position: 100% 50%;
   }
   100% {
-    color: #ff6b6b;
-    text-shadow: 
-      0 0 10px #ff6b6b,
-      0 0 20px #ff6b6b;
+    background-position: 0% 50%;
   }
 }
 
-.rainbow-glow {
-  animation: rainbow-glow 6s ease-in-out infinite;
+.gradient-text {
+  background: linear-gradient(
+    90deg,
+    #60a5fa 0%,
+    #34d399 25%,
+    #a78bfa 50%,
+    #f59e0b 75%,
+    #ec4899 100%
+  );
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: gradient-shift 4s ease-in-out infinite;
+  text-shadow: 
+    0 0 8px rgba(96, 165, 250, 0.5),
+    0 0 16px rgba(96, 165, 250, 0.3);
+}
+
+.text-white-no-glow {
+  color: white;
+  opacity: 0.70;
+}
+
+.text-black-no-glow {
+  color: black;
+  opacity: 0.90;
 }
