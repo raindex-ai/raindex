@@ -14,7 +14,7 @@ export default function Home() {
       <div className="text-center">
         <div className="mb-8">
           <Image
-            src={isDark ? "/images/Logo_White_Trans.png" : "/images/Logo_Black.png"}
+            src={isDark ? "/images/Logo_White.png" : "/images/Logo_Black.png"}
             alt="Raindex Logo"
             width={120}
             height={120}

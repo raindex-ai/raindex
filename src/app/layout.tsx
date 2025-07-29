@@ -6,14 +6,14 @@ import { ThemeProvider } from "@/lib/theme-context";
 const sora = Sora({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Raindex – Deterministic AI for Parcel Contracts",
-  description: "Raindex is a SaaS platform that lets shippers simulate, compare, and execute multi-carrier parcel strategy.",
+  title: "Raindex - Deterministic AI for Logistics Contracts",
+  description: "Raindex is a SaaS platform that lets shippers simulate, compare, and execute multi-carrier logistics strategy.",
   icons: {
     icon: "/images/favicon.ico",
   },
   openGraph: {
     title: "Raindex",
-    description: "Simulate, compare, and execute parcel contract logic with deterministic AI.",
+    description: "Simulate, compare, and execute logistics contract logic with deterministic AI.",
     url: "https://raindex.ai",
     siteName: "Raindex",
     images: [
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Raindex",
-    description: "Simulate, compare, and execute parcel contract logic with deterministic AI.",
+    description: "Simulate, compare, and execute logistics contract logic with deterministic AI.",
     images: ["/images/socialpreview.png"],
   },
 };
